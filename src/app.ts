@@ -29,7 +29,6 @@ class State<T> {
   protected listeners: Listener<T>[] = [];
 
   addListener(listenerFun: Listener<T>) {
-    console.log("listener is called ", listenerFun);
     this.listeners.push(listenerFun);
   }
 }
@@ -374,7 +373,6 @@ class ProjectInput extends Component<HTMLDivElement, HTMLFormElement> {
 
     if (Array.isArray(userInput)) {
       const [title, desc, people] = userInput;
-      console.log(title, desc, people);
       projectState.addProject(title, desc, people);
       this.clearInputs();
     }
