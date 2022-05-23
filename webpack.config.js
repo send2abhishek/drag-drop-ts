@@ -1,10 +1,12 @@
 const path = require("path");
 
 module.exports = {
+  mode: "development",
   entry: "./src/app.ts", // starting file of the app
   output: {
     filename: "bundle.js", // output file name
     path: path.resolve(__dirname, "dist"), // output directory
+    publicPath: "dist",
   },
   //devtool: "inline-source-map",
   module: {
